@@ -1,3 +1,5 @@
+import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider'
+
 const {makeAutoObservable} = require('mobx')
 
 export default class DeviceStore {
@@ -14,6 +16,7 @@ export default class DeviceStore {
             {id: 1, name: '12 pro', price: 1000, rating: 5, img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.m6D8SD2JgunNE9PGYjO0-QHaHa%26pid%3DApi&f=1'},
             {id: 2, name: 'disjwasher', price: 1000, rating: 4, img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexpert-kachestva.ru%2Fwp-content%2Fuploads%2F2021%2F05%2F2021-05-01_14-23-06.png&f=1&nofb=1'}        
         ]
+        this._selectedType = {}
         makeAutoObservable(this) 
     }
 
@@ -28,6 +31,10 @@ export default class DeviceStore {
         this.devices = devices
     }
 
+    setSelectedType(type) {
+        this._selectedType = type
+    }
+
     get devices() {
         return this._devices
     }
@@ -37,6 +44,10 @@ export default class DeviceStore {
     }
     get types() {
         return this._types
+    }
+
+    get selectedType() {
+        return this._selectedType
     }
 
 }
