@@ -25,6 +25,27 @@ export default class DeviceStore {
         rating: 4,
         img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexpert-kachestva.ru%2Fwp-content%2Fuploads%2F2021%2F05%2F2021-05-01_14-23-06.png&f=1&nofb=1",
       },
+      {
+        id: 3,
+        name: "disjasaswasher",
+        price: 1000,
+        rating: 4,
+        img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexpert-kachestva.ru%2Fwp-content%2Fuploads%2F2021%2F05%2F2021-05-01_14-23-06.png&f=1&nofb=1",
+      },
+      {
+        id: 4,
+        name: "disssjwasher",
+        price: 11000,
+        rating: 4,
+        img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexpert-kachestva.ru%2Fwp-content%2Fuploads%2F2021%2F05%2F2021-05-01_14-23-06.png&f=1&nofb=1",
+      },
+      {
+        id: 5,
+        name: "hey",
+        price: 11000,
+        rating: 4,
+        img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexpert-kachestva.ru%2Fwp-content%2Fuploads%2F2021%2F05%2F2021-05-01_14-23-06.png&f=1&nofb=1",
+      }
     ];
     this._selectedType = {};
     this._selectedBrand = {};
