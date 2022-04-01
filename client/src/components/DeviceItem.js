@@ -18,7 +18,7 @@ export const DeviceItem = ({ device }) => {
         <div className="text-black-50 d-flex justify-content-between align-items-center">
           <div>{device.name}</div>
           <div>
-            <div>{device.rating}</div>
+            <div>{device.price}</div>
           </div>
         </div>
       </Card>
