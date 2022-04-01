@@ -14,7 +14,7 @@ export const DeviceItem = ({ device }) => {
       style={{ cursor: "pointer" }}
     >
       <Card style={{ width: 150, cursor: "poiner" }} border="light">
-        <Image width={150} height={150} src={device.img}></Image>
+        <Image width={150} height={150} src={'http://localhost:3030/' + device.img}></Image>
         <div className="text-black-50 d-flex justify-content-between align-items-center">
           <div>{device.name}</div>
           <div>

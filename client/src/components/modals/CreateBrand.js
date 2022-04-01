@@ -6,14 +6,14 @@ import Button from "react-bootstrap/Button";
 export const CreateBrand = ({ show, onHide }) => {
   return (
     <Modal show={show} onHide={onHide} size="lg" centered>
-      <Modal.Header closeButton>
+      <Modal.Header >
         <Modal.Title id="contained-modal-title-vcenter">
-          Добавить тип
+          Добавить бренд
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
-          <Form.Control placeholder={"Введите название типа"} />
+          <Form.Control placeholder={"Введите название бренда"} />
         </Form>
       </Modal.Body>
       <Modal.Footer>

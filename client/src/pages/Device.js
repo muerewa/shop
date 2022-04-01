@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Col, Container, Row, Image, Button, Card} from "react-bootstrap";
+import { fetchOneDevice } from "../http/DeviceApi";
 
 const Device = () => {
-  const device = {
-    id: 1,
-    name: "12 pro",
-    price: 1000,
-    rating: 5,
-    img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.m6D8SD2JgunNE9PGYjO0-QHaHa%26pid%3DApi&f=1",
-  };
+  const [device, setDevice] = useState({info: []})
+  const {id} = useParams()
+  useEffect(() => {
+    fetchOneDevice(id).then(data => setDevice(data))
+  }, [])
   return (
     <Container>
       <Row>
         <Col md={4}>
-          <Image width={300} height={200} src={device.img}></Image>
+          <Image width={300} height={200} src={'http://localhost:3030/' + device.img}></Image>
         </Col>
         <Col md={4}>
           <Row >
