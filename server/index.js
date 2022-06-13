@@ -10,11 +10,11 @@ const path = require('path')
 
 const PORT = process.env.PORT || 3000
 const app = express()
-
-app.use(cors())
-app.use(express.json())
-app.use(fileUpload({}))
-app.use(express.static(path.resolve(__dirname, 'static')))
+    
+app.use(cors()) // Для запросов из браузера
+app.use(express.json()) // Для обработки json
+app.use(fileUpload({})) // Для работы с файлами
+app.use(express.static(path.resolve(__dirname, 'static')))  // Статика
 app.use('/api', router)
 app.use(ErrorMiddleware)
 

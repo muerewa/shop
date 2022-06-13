@@ -26,7 +26,7 @@ export const CreateDevice = observer(({ show, onHide }) => {
     formData.append('brandId',device.selectedBrand.id)
     formData.append('typeId',device.selectedType.id)
     formData.append('info', JSON.stringify(info))
-    createDevice(formData).then(data => onHide())
+    createDevice(formData).then(data => {onHide(); console.log(data)})
   };
 
   const selectFile = (e) => {

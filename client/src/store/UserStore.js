@@ -4,6 +4,8 @@ export default class UserStore {
   constructor() {
     this._isAuth = false;
     this._user = {};
+    this._token = localStorage.getItem('token')
+    
     makeAutoObservable(this);
   }
 
@@ -13,6 +15,10 @@ export default class UserStore {
 
   setUser(user) {
     this._user = user;
+  }
+
+  get token() {
+    return this._token
   }
 
   get isAuth() {

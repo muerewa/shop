@@ -9,6 +9,7 @@ import {
   LOGIN_ROUTE,
   MAIN_ROUTE,
   REG_ROUTE,
+  BASKET_ROUTE
 } from "../utils/consts";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
@@ -29,7 +30,7 @@ const NavBar = observer(() => {
         </NavLink>
         {user.isAuth ? (
           <Nav className="ml-auto" style={{ color: "white" }}>
-            <Button variant={"outline-light"}>Корзина</Button>
+            <Button variant={"outline-light"} onClick={() => history.push(BASKET_ROUTE)} >Корзина</Button>
             <Button
               variant={"outline-light"}
               className="ms-4"

@@ -22,12 +22,13 @@ const Auth = observer(() => {
         const data = await login(email,pass);
       } else {
         const data = await registration(email,pass);
-        }
+      }
         user.setUser(user)
         user.setIsAuth(true)
-        history.push(MAIN_ROUTE)
+        
+        history.go(0)
     } catch (e) {
-      alert(e.response.data.message)
+      alert(e )
     }
 
   };
